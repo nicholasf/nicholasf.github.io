@@ -1,0 +1,23 @@
+baseURL = 'https://nicholasf.github.io/'
+languageCode = 'en-us'
+title = 'nicholasf'
+theme = 'PaperMod'
+[pagination]
+  pagerSize = 10
+
+[params]
+  description = ""
+  author = "nicholasf"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  ShowShareButtons = false
+
+[params.homeInfoParams]
+  Title = "hi"
+  Content = ""
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/nicholasf"
