@@ -14,7 +14,9 @@ My primary motivations for building out this skillset have been:
 * experiment with different, open models running on my own local hardware
 * ensure I am economical with Claude Pro tokens
 
-The below began as a [monorepo of 3 skills](https://github.com/nicholasf/skills). As I began to refactor them into individual git repos, over last weekend, they became 5 repos. I might find time at a later date to blog at greater length about my view on [skills](https://agentskills.io/home). 
+The below began as a [monorepo of three skills](https://github.com/nicholasf/skills). As I began to refactor them last weekend they became five. I think this in itself was indicative that it was the right moment to refactor my skills into individual git repos.  
+
+I might find time at a later date to blog at greater length about my view on [skills](https://agentskills.io/home). For now, someone may find something interesting in the below. 
 
 
 ## 1. Manage Skills
