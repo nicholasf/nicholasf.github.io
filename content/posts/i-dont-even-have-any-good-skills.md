@@ -8,7 +8,7 @@ As Napoleon Dynamite said ...  {{< youtube-lite S1xQgYYhku4 >}}.
 
 This collection of skills exists to help my practice of coding at home. I typically use my Claude Pro subscription in a terminal and, to preserve tokens, assign grunt tasks to [qwen3-coder:30b](https://ollama.com/library/qwen3-coder:30b) running on an RTX 4090. 
 
-My primary motivations for building out this skillset have been:
+My primary motivations for building out these skills have been:
 
 * experiment with agentic development
 * experiment with different, open models running on my own local hardware
@@ -16,7 +16,7 @@ My primary motivations for building out this skillset have been:
 
 The below began as a [monorepo of three skills](https://github.com/nicholasf/skills). As I began to refactor them last weekend they became five. I think this in itself was indicative that it was the right moment to refactor my skills into individual git repos.  
 
-I might find time at a later date to blog at greater length about my view on [skills](https://agentskills.io/home). For now, someone may find something interesting in the below. 
+I might find time at a later date to blog at greater length about my view on [skills](https://agentskills.io/home). I've kept those viewpoints out of this post, in order to be brief. I'd be happy to discuss skills generally with anyone who wants to reach out.
 
 
 ## 1. Manage Skills
