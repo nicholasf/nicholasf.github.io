@@ -1,6 +1,6 @@
 baseURL = 'https://nicholasf.github.io/'
 languageCode = 'en-us'
-title = 'nicholasf'
+title = 'quizzical...'
 theme = 'PaperMod'
 [pagination]
   pagerSize = 10
@@ -14,10 +14,10 @@ theme = 'PaperMod'
   ShowCodeCopyButtons = true
   ShowShareButtons = false
 
-[params.homeInfoParams]
-  Title = "hi"
-  Content = ""
-
 [[params.socialIcons]]
   name = "github"
   url = "https://github.com/nicholasf"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://linkedin.com/in/nicholasfaiz"

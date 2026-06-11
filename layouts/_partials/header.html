@@ -1,0 +1,19 @@
+<header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            {{- if site.Title }}
+            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ site.Title }} (Alt + H)">
+                {{- site.Title -}}
+            </a>
+            {{- end }}
+        </div>
+        <div class="header-social-icons">
+            {{- range site.Params.socialIcons }}
+            <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+                title="{{ (.title | default .name) | title }}">
+                {{ partial "svg.html" . }}
+            </a>
+            {{- end }}
+        </div>
+    </nav>
+</header>

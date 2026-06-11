@@ -1,0 +1,41 @@
+<style>
+.header-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-social-icons a {
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.header-social-icons a:hover {
+    opacity: 1;
+}
+
+.header-social-icons svg {
+    width: 20px;
+    height: 20px;
+}
+
+.yt-lite { position: relative; cursor: pointer; background: #000; aspect-ratio: 9/16; max-width: 315px; }
+.yt-lite img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.8; }
+.yt-lite iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
+.yt-play-btn {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px; height: 44px; border-radius: 12px;
+    background: #ff0000;
+    pointer-events: none;
+}
+.yt-play-btn::after {
+    content: ''; position: absolute; top: 50%; left: 55%;
+    transform: translate(-50%, -50%);
+    border: 10px solid transparent;
+    border-left: 18px solid white;
+}
+</style>

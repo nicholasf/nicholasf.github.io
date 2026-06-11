@@ -1,0 +1,5 @@
+{{ $id := .Get 0 }}
+<div class="yt-lite" data-id="{{ $id }}" onclick="this.innerHTML='<iframe src=https://www.youtube.com/embed/{{ $id }}?autoplay=1 frameborder=0 allowfullscreen allow=autoplay></iframe>'">
+    <img src="https://i.ytimg.com/vi/{{ $id }}/hqdefault.jpg" alt="YouTube video" loading="lazy">
+    <div class="yt-play-btn"></div>
+</div>
