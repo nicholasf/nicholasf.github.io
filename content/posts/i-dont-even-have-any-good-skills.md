@@ -14,7 +14,7 @@ My primary motivations for building out these skills have been:
 * experiment with different, open models running on my own local hardware
 * ensure I am economical with Claude Pro tokens
 
-The below began as a [monorepo of three skills](https://github.com/nicholasf/skills). As I began to refactor them last weekend they became five. I think this in itself was indicative that it was the right moment to refactor my skills into individual git repos.  
+The below began as a [monorepo of three skills](https://github.com/nicholasf/skills). As I began to refactor them last weekend they became five. I think this in itself was indicative that it was the right moment to refactor them into individual git repos.   
 
 I might find time at a later date to blog at greater length about my view on [skills](https://agentskills.io/home). I've kept those viewpoints out of this post, in order to be brief. I'd be happy to discuss skills generally with anyone who wants to reach out.
 
@@ -29,28 +29,26 @@ I've modelled it on [`pnpm`](https://pnpm.io/), [`uv`](https://docs.astral.sh/uv
 
 It takes a SKILLS_HOME env var, which is a location where all skills are kept globally. Here, a `skills.md` file is kept.
 
-| name | url | load_at_startup |
-|------|-----|-----------------|
-| manage-skills-skill | git@github.com:nicholasf/manage-skills-skill.git | true |
-| track-tasks-skill | git@github.com:nicholasf/track-tasks-skill.git | true |
-| load-topology-skill | git@github.com:nicholasf/load-topology-skill.git | true |
-| ask-remote-agent-skill | git@github.com:nicholasf/ask-remote-agent-skill.git | false |
-| ask-remote-llm-skill | git@github.com:nicholasf/ask-remote-llm-skill.git | false |
-
-_Table trimmed for readability — local paths and pinned versions omitted._
+| name | url | local_path | load_at_startup | version |
+|------|-----|------------|-----------------|--------|
+| manage-skills-skill | git@github.com:nicholasf/manage-skills-skill.git | /home/nicholasf/code/github/nicholasf/manage-skills-skill | true | 52ea2a23a8e3fb1055c1100b3f3832cc7af9cbfe |
+| track-tasks-skill | git@github.com:nicholasf/track-tasks-skill.git | /home/nicholasf/code/github/nicholasf/track-tasks-skill | true | a493afb1a4b30494890d90de05271030015c1d5f |
+| load-topology-skill | git@github.com:nicholasf/load-topology-skill.git | /home/nicholasf/code/github/nicholasf/load-topology-skill | true | 78189576faf584c545bdb48672c76202c7459a0a |
+| ask-remote-agent-skill | git@github.com:nicholasf/ask-remote-agent-skill.git | /home/nicholasf/code/github/nicholasf/ask-remote-agent-skill | false | d446c1aefdd81959120048446e6398f58f2c7281 |
+| ask-remote-llm-skill | git@github.com:nicholasf/ask-remote-llm-skill.git | /home/nicholasf/code/github/nicholasf/ask-remote-llm-skill | false | 3af185666160269354e7865f86e37d1c97c1e63a |
 
 
 You will also see that there's a `load_at_startup` flag. For Claude, if you add the following to your ~/.claude/settings.json this will ensure that the skills you want (and their commands) are loaded on startup.
 
 You can, however, use it in individual project with a `skills.md` file, that will then sync from the global installation. `skills.md` acts like a lockfile, also, specifying which version of a skill to install.
 
-Lastly, it has a simple integration with `.env` files. I found that my skills began needing environment variables for API access, etc., and it was cleaner to let the management solution define a central solution.
+Lastly, it has a simple integration with `.env` files. I found that my skills began needing environment variables for API access, etc., and it was cleaner to let the management solution define a central ability for reuse.
 
 ## 2. Load Topology
 
 [load-topology-skill](https://github.com/nicholasf/load-topology-skill).
 
-This is probably the most interesting skill. It lets you map a topology of machines on your network. At the start of each of my coding sessions I now run `/load topology`.
+This is probably the most interesting skill. It lets you build a map topology of machines on your network that you can then refer to to do other things. At the start of each of my coding sessions I now run `/load topology`.
 
 So, yes, natural language phrases about asking your primary agent to ssh into a machine and start an nginx instance, warm up an LLM or whatever. I find this aspect of using LLMs with machines enjoyable. 
 
@@ -67,12 +65,10 @@ Note that a later skill, `track-tasks-skill` relies on the benchmark.
 
 This is the primary table in topology.md
 
-| hostname | os | ssh | gpu |
-|----------|-----|-----|-----|
-| pond | linux | yes | NVIDIA GeForce RTX 4090, 24GB VRAM |
-| gollum | linux | yes | AMD Phoenix1 (ROCm) |
-
-_Table trimmed for readability — IPs, agent config, and other implementation columns omitted._
+| name | hostname | tailscale-ip | local-ip | os | role | ssh | ssh-user | gpu | vram | last-verified | hermes_gateway | hermes_key_env | goose_acp_url |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| — | pond | XXX.XXX.XX.XX | XXX.XXX.XX.XXX | linux | — | yes | nicholasf | NVIDIA GeForce RTX 4090, 24GB VRAM | — | 2026-06-11 | http://pond:8642 | POND_HERMES_KEY | ws://pond:3284 |
+| — | gollum | XXX.XX.XXX.XXX | 192.168.86.73 | linux | — | yes | nicholasf | Advanced Micro Devices, Inc. [AMD/ATI] Phoenix1 (rev c4) | 0GB UMA (ROCm) | 2026-06-11 | — | — | — |
 
 The topology file has a convention that other skills can append data to it, as needed, in separate tables in the same file. This becomes necessary for other skills which leverage the topology for agent specific tasks. 
 
