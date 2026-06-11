@@ -69,7 +69,29 @@ Lastly, it has a simple integration with `.env` files. I found that my skills be
 
 This is probably the most interesting skill. It lets you build a map of machines on your network that you can then refer to to do other things. At the start of each of my coding sessions I now run `/load-topology`.
 
-So, yes, natural language phrases about asking your primary agent to ssh into a machine and start an nginx instance, warm up an LLM or whatever. I find this aspect of using LLMs with machines enjoyable. 
+I use a [tailnet](https://tailscale.com/docs/concepts/tailnet) although I have also defined a manual provider, where you can enter in an IP address of a machine one by one interacting with your agent. 
+
+Via a slash command in the terminal:
+
+```
+/load-topology init tailscale 
+
+# or
+
+/load-topology init manual
+```
+
+Otherwise, via the script:
+```
+# Tailscale:
+python3 scripts/init.py --provider tailscale
+
+# or, manual:
+python3 scripts/init.py --provider manual --machines "pond 192.168.86.118"
+
+```
+
+So, yes, then you have natural language phrases about asking your primary agent to ssh into a machine and start an nginx instance, warm up an LLM or whatever. I find this aspect of using LLMs with machines enjoyable. 
 
 **THERE ARE SECURITY RISKS HERE - ENSURE YOU ARE DOING THIS WITHIN YOUR HOME LAB AND THAT YOU UNDERSTAND WHAT YOU ARE DOING AND WHAT THE AGENT CAN DO.**
 
