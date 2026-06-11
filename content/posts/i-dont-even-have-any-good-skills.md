@@ -67,7 +67,7 @@ Lastly, it has a simple integration with `.env` files. I found that my skills be
 
 [load-topology-skill](https://github.com/nicholasf/load-topology-skill).
 
-This is probably the most interesting skill. It lets you build a map topology of machines on your network that you can then refer to to do other things. At the start of each of my coding sessions I now run `/load topology`.
+This is probably the most interesting skill. It lets you build a map of machines on your network that you can then refer to to do other things. At the start of each of my coding sessions I now run `/load topology`.
 
 So, yes, natural language phrases about asking your primary agent to ssh into a machine and start an nginx instance, warm up an LLM or whatever. I find this aspect of using LLMs with machines enjoyable. 
 
