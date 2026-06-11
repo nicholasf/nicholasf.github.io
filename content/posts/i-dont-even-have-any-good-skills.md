@@ -1,7 +1,7 @@
 +++
 date = '2026-06-11T19:07:12+10:00'
 draft = false
-title = 'I Don\'t Even Have Any Good Skills'
+title = "I Don't Even Have Any Good Skills"
 +++
 
 As Napoleon Dynamite said ...  {{</* youtube-lite S1xQgYYhku4 */>}}.
