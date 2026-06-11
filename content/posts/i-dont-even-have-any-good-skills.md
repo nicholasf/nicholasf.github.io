@@ -14,7 +14,7 @@ My primary motivations for building out these skills have been:
 * experiment with different, open models running on my own local hardware
 * ensure I am economical with Claude Pro tokens
 
-The below began as a [monorepo of three skills](https://github.com/nicholasf/skills). As I began to refactor them last weekend they became five. I think this in itself was indicative that it was the right moment to refactor my skills into individual git repos.  
+The below began as a [monorepo of three skills](https://github.com/nicholasf/skills). As I began to refactor them last weekend they became five. I think this in itself was indicative that it was the right moment to refactor them into individual git repos.   
 
 I might find time at a later date to blog at greater length about my view on [skills](https://agentskills.io/home). I've kept those viewpoints out of this post, in order to be brief. I'd be happy to discuss skills generally with anyone who wants to reach out.
 
@@ -27,15 +27,15 @@ This skill lets you `/manage-skills` with your agent to install, sync, etc. skil
 
 I've modelled it on [`pnpm`](https://pnpm.io/), [`uv`](https://docs.astral.sh/uv/) and [`cargo`](https://doc.rust-lang.org/stable/cargo/) with some differences.
 
-It takes a SKILLS_HOME env var, which is a location where all skills are kept globally. Here, a `skills.md` file is kept.
+It takes a SKILLS_HOME env var, which is a location where all skills are kept globally. Here, a `skills.md` file is kept — tracking each skill, its repo, whether it loads at startup, and its pinned version.
 
-| name | url | local_path | load_at_startup | version |
-|------|-----|------------|-----------------|--------|
-| manage-skills-skill | git@github.com:nicholasf/manage-skills-skill.git | /home/nicholasf/code/github/nicholasf/manage-skills-skill | true | 52ea2a23a8e3fb1055c1100b3f3832cc7af9cbfe |
-| track-tasks-skill | git@github.com:nicholasf/track-tasks-skill.git | /home/nicholasf/code/github/nicholasf/track-tasks-skill | true | a493afb1a4b30494890d90de05271030015c1d5f |
-| load-topology-skill | git@github.com:nicholasf/load-topology-skill.git | /home/nicholasf/code/github/nicholasf/load-topology-skill | true | 78189576faf584c545bdb48672c76202c7459a0a |
-| ask-remote-agent-skill | git@github.com:nicholasf/ask-remote-agent-skill.git | /home/nicholasf/code/github/nicholasf/ask-remote-agent-skill | false | d446c1aefdd81959120048446e6398f58f2c7281 |
-| ask-remote-llm-skill | git@github.com:nicholasf/ask-remote-llm-skill.git | /home/nicholasf/code/github/nicholasf/ask-remote-llm-skill | false | 3af185666160269354e7865f86e37d1c97c1e63a |
+The skills I currently have installed:
+
+* [manage-skills-skill](https://github.com/nicholasf/manage-skills-skill)
+* [track-tasks-skill](https://github.com/nicholasf/track-tasks-skill)
+* [load-topology-skill](https://github.com/nicholasf/load-topology-skill)
+* [ask-remote-agent-skill](https://github.com/nicholasf/ask-remote-agent-skill)
+* [ask-remote-llm-skill](https://github.com/nicholasf/ask-remote-llm-skill)
 
 
 You will also see that there's a `load_at_startup` flag. For Claude, if you add the following to your ~/.claude/settings.json this will ensure that the skills you want (and their commands) are loaded on startup.
