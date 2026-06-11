@@ -40,7 +40,24 @@ It takes a SKILLS_HOME env var, which is a location where all skills are kept gl
 _Table trimmed for readability — local paths and pinned versions omitted._
 
 
-You will also see that there's a `load_at_startup` flag. For Claude, if you add the following to your ~/.claude/settings.json this will ensure that the skills you want (and their commands) are loaded on startup.
+You will also see that there's a `load_at_startup` flag. For Claude, if you add the following to your `~/.claude/settings.json`  this will ensure that the skills you want (and their commands) are loaded on startup.
+
+```
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${SKILLS_HOME:-$HOME/.agents/skills}/manage-skills-skill/manage_skills.py\" context",
+            "statusMessage": "Loading skills..."
+          }
+        ]
+      }
+    ]
+  }
+
+```
 
 You can, however, use it in individual project with a `skills.md` file, that will then sync from the global installation. `skills.md` acts like a lockfile, also, specifying which version of a skill to install.
 
