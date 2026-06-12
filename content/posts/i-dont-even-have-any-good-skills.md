@@ -6,7 +6,7 @@ title = "I Don't Even Have Any Good Skills"
 
 As Napoleon Dynamite said ...  {{< youtube-lite S1xQgYYhku4 >}}
 
-This is a collection of skills I have been experimenting with and evolving on my own project. I typically use my Claude Pro subscription in a terminal on my Framework and, to preserve tokens, assign grunt tasks to [qwen3-coder:30b](https://ollama.com/library/qwen3-coder:30b) running on an RTX 4090 on a gaming machine I bought from Scorptec two years ago. 
+This is a collection of skills I have been evolving for on my own project, which gives me a bit more leeway for experimentation and learning. I typically use my Claude Pro subscription in a terminal on my Framework and, to preserve tokens, assign grunt tasks to [qwen3-coder:30b](https://ollama.com/library/qwen3-coder:30b) running on an RTX 4090 on a gaming machine I bought from Scorptec two years ago. 
 
 My primary motivations for building out these skills have been:
 
