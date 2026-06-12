@@ -69,7 +69,7 @@ Lastly, it has a simple integration with `.env` files. I found that my skills be
 
 This is probably the most interesting skill. It lets you build a map of machines on your network that you can then refer to to do other things. At the start of each of my coding sessions I now run `/load-topology`.
 
-I use a [tailnet](https://tailscale.com/docs/concepts/tailnet) although I have also defined a manual provider, where you can enter in an IP address of a machine one by one interacting with your agent. 
+I use a [tailnet](https://tailscale.com/docs/concepts/tailnet). The skills has a command which wraps a call to [Tailscale's  `status` command](https://tailscale.com/docs/install), which returns a list of all devices registered on the tailnet. Alternatively, I have defined a manual provider, where you can enter in an IP address of a machine by interacting with your agent. 
 
 Via a slash command in the terminal:
 
