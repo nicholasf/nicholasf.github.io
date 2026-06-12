@@ -6,7 +6,7 @@ title = "I Don't Even Have Any Good Skills"
 
 As Napoleon Dynamite said ...  {{< youtube-lite S1xQgYYhku4 >}}
 
-This collection of skills exists to help my practice of coding at home. I typically use my Claude Pro subscription in a terminal on my Framework and, to preserve tokens, assign grunt tasks to [qwen3-coder:30b](https://ollama.com/library/qwen3-coder:30b) running on an RTX 4090 on a gaming machine I bought from Scorptec two years ago. 
+This is a collection of skills I have been experimenting with and evolving on a home project. I typically use my Claude Pro subscription in a terminal on my Framework and, to preserve tokens, assign grunt tasks to [qwen3-coder:30b](https://ollama.com/library/qwen3-coder:30b) running on an RTX 4090 on a gaming machine I bought from Scorptec two years ago. 
 
 My primary motivations for building out these skills have been:
 
@@ -69,7 +69,7 @@ Lastly, it has a simple integration with `.env` files. I found that my skills be
 
 This is probably the most interesting skill. It lets you build a map of machines on your network that you can then refer to to do other things. At the start of each of my coding sessions I now run `/load-topology`.
 
-I use a [tailnet](https://tailscale.com/docs/concepts/tailnet). The skills has a command which wraps a call to [Tailscale's  `status` command](https://tailscale.com/docs/install), which returns a list of all devices registered on the tailnet. Alternatively, I have defined a manual provider, where you can enter in an IP address of a machine by interacting with your agent. 
+I use a [tailnet](https://tailscale.com/docs/concepts/tailnet). The skill has a command which wraps a call to [Tailscale's  `status` command](https://tailscale.com/docs/install), which returns a list of all devices registered on the tailnet. Alternatively, I have defined a manual provider, where you can enter in an IP address of a machine by interacting with your agent. 
 
 Via a slash command in the terminal:
 
