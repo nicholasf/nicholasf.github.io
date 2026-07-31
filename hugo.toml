@@ -14,6 +14,16 @@ theme = 'PaperMod'
   ShowCodeCopyButtons = true
   ShowShareButtons = false
   images = ["/images/street_food.png"]
+  mainSections = ["blog"]
+
+[params.profileMode]
+  enabled = true
+  title = "nicholasf"
+  subtitle = "PLACEHOLDER — bio copy still to be written (todo.md item 3)"
+
+[[params.profileMode.buttons]]
+  name = "Blog"
+  url = "/blog/"
 
 [[params.socialIcons]]
   name = "github"
@@ -22,3 +32,9 @@ theme = 'PaperMod'
 [[params.socialIcons]]
   name = "linkedin"
   url = "https://linkedin.com/in/nicholasfaiz"
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "/blog/"
+  weight = 10
