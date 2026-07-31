@@ -1,4 +1,4 @@
-baseURL = 'https://nicholasf.github.io/'
+baseURL = 'https://nicholasf.dev/'
 locale = 'en-us'
 title = 'quizzical...'
 theme = 'PaperMod'
