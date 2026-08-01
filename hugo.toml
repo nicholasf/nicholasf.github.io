@@ -1,6 +1,6 @@
 baseURL = 'https://nicholasf.dev/'
 locale = 'en-us'
-title = 'quizzical...'
+title = 'nicholasf'
 theme = 'PaperMod'
 [pagination]
   pagerSize = 10
@@ -16,25 +16,21 @@ theme = 'PaperMod'
   images = ["/images/street_food.png"]
   mainSections = ["blog"]
 
-[params.profileMode]
-  enabled = true
-  title = "nicholasf"
-  subtitle = "PLACEHOLDER — bio copy still to be written (todo.md item 3)"
-
-[[params.profileMode.buttons]]
-  name = "Blog"
-  url = "/blog/"
-
 [[params.socialIcons]]
   name = "github"
   url = "https://github.com/nicholasf"
 
 [[params.socialIcons]]
+  name = "bluesky"
+  url = "https://bsky.app/profile/nicholasf.dev"
+
+[[params.socialIcons]]
   name = "linkedin"
   url = "https://linkedin.com/in/nicholasfaiz"
 
+
 [[menu.main]]
   identifier = "blog"
-  name = "Blog"
+  name = "Quizzical"
   url = "/blog/"
   weight = 10

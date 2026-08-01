@@ -1,0 +1,46 @@
+/* Plain, text-first look — override PaperMod's card/rounded-corner defaults */
+
+:root {
+    --main-width: 1200px;
+    --nav-width: 1200px;
+    --radius: 0px;
+    --theme: rgb(253, 250, 246);
+    --entry: rgb(253, 250, 246);
+    --primary: rgb(35, 32, 28);
+    --secondary: rgb(100, 95, 88);
+    --tertiary: rgb(214, 208, 198);
+    --content: rgb(45, 42, 38);
+    --border: rgb(224, 218, 208);
+}
+
+:root[data-theme="dark"] {
+    --theme: rgb(20, 19, 18);
+    --entry: rgb(20, 19, 18);
+    --primary: rgb(230, 226, 219);
+    --secondary: rgb(160, 155, 146);
+    --tertiary: rgb(58, 55, 50);
+    --content: rgb(210, 205, 197);
+    --border: rgb(48, 45, 41);
+}
+
+.post-entry {
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+}
+
+.post-entry:hover,
+.post-entry:focus-within {
+    transform: none;
+}
+
+.home-intro {
+    max-width: var(--main-width);
+    margin: calc(var(--gap) * 2) auto;
+    line-height: 1.7;
+}
+
+.home-intro a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
