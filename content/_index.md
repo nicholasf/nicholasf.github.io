@@ -4,7 +4,7 @@ title = "nicholasf"
 
 *Come back later - this is under construction. I'll probably finish it this weekend.*
 
-Hi, I'm Nicholas Faiz. sI've been programming commercially since 2000. 
+Hi, I'm Nicholas Faiz. I've been programming commercially since 2000. 
 
 I very much enjoy coding and have remained hands on, though I do take on architecture and leadership roles.
 
