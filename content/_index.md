@@ -8,9 +8,9 @@ Hi, I'm Nicholas Faiz. I've been programming commercially since 2000.
 
 I very much enjoy coding and have remained hands on, though I do take on architecture and leadership roles.
 
-I've worked in fintech (LeavePlus, EightCap, ANZ), government (Department of Agriculture), media (Newscorp), gambling (Betfair, Tabcorp), the Australian research sector (Australia Data Archives, Aboriginal & Torres Straight Islander Data Archive) and other smaller sectors. Earlier roles saw me at Johnson & Johnson Medical, Corporate Express (renamed Staples, later acquired by Winq) and Atlassian.
+I've worked in fintech (LeavePlus, EightCap, ANZ), government (Department of Agriculture), media (Newscorp), gambling (Betfair, Tabcorp), the Australian research sector (Australia Data Archives, Aboriginal & Torres Strait Islander Data Archive) and other smaller sectors. Earlier roles saw me at Johnson & Johnson Medical, Corporate Express (renamed Staples, later acquired by Winq) and Atlassian.
 
-Here's my [github](https://github.com/nicholasf). Lately, I've been quite active in experimenting with adopting agentic coding practices have built [a series of skills](https://nicholasf.dev/blog/i-dont-even-have-any-good-skills/) for my work at home. I'm a polyglot - you'll find recent code in Python, Node, Go and Rust as well as other languages from earlier moments (Ruby, Clojure, Elixir, Java). 
+Here's my [github](https://github.com/nicholasf). Lately, I have built [a series of skills](https://nicholasf.dev/blog/i-dont-even-have-any-good-skills/) for my work at home. I'm a polyglot - you'll find recent code in Python, Node, Go and Rust as well as other languages from earlier moments (Ruby, Clojure, Elixir, Java). 
 
 I maintain [Faizn Software Pty Ltd](https://abr.business.gov.au/ABN/View?abn=48693296472) for consulting and contracting with clients. 
 
