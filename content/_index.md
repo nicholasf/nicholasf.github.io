@@ -8,7 +8,7 @@ Hi, I'm Nicholas Faiz. sI've been programming commercially since 2000.
 
 I very much enjoy coding and have remained hands on, though I do take on architecture and leadership roles.
 
-I've worked in fintech (LeavePlus, EightCap, ANZ), government (Department of Agriculture), media (Newscorp), gambling (Betfair, Tabcorp), the university sector (Australia Data Archives, Aboriginal & Torres Straight Islander Data Archive) and other smaller sectors. Earlier roles saw me at Johnson & Johnson Medical, Corporate Express (renamed Staples, later acquired by Winq) and Atlassian.
+I've worked in fintech (LeavePlus, EightCap, ANZ), government (Department of Agriculture), media (Newscorp), gambling (Betfair, Tabcorp), the Australian research sector (Australia Data Archives, Aboriginal & Torres Straight Islander Data Archive) and other smaller sectors. Earlier roles saw me at Johnson & Johnson Medical, Corporate Express (renamed Staples, later acquired by Winq) and Atlassian.
 
 Lately I've been quite active in experimenting with adopting agentic coding practices. Some of this you'll find on my [github](https://github.com/nicholasf). 
 
