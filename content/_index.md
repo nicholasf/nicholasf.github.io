@@ -12,7 +12,7 @@ I enjoy building things with code and other people. I have stayed hands on while
 
 I've worked in fintech (LeavePlus, EightCap, ANZ), government (Department of Agriculture), media (Newscorp), gambling (Betfair, Tabcorp), the Australian research sector (Australia Data Archives, Aboriginal & Torres Strait Islander Data Archive) and other sectors. Earlier roles saw me at Johnson & Johnson Medical, Corporate Express (renamed Staples, later acquired by Winq) and Atlassian. I have worked in startups in Australia and the USA. 
 
-Here's my [github](https://github.com/nicholasf). Lately, I have built [a series of skills](https://nicholasf.dev/blog/i-dont-even-have-any-good-skills/) for my work at home. I'm a polyglot. There's a particular appeal in learning different ways to express and solve problems. Commerially I am pragmatic. You'll find recent code in Python, Node, Go and Rust as well as other languages from earlier moments (Ruby, Clojure, Elixir, Java). You'll also find open source projects I have created and contributed to here. 
+Here's my [github](https://github.com/nicholasf). Lately, I have built [a series of skills](https://nicholasf.dev/blog/i-dont-even-have-any-good-skills/) for my work at home. I'm a polyglot. There's a particular appeal in learning different ways to express and solve problems. Commercially I am pragmatic. You'll find recent code in Python, Node, Go and Rust as well as other languages from earlier moments (Ruby, Clojure, Elixir, Java). You'll also find open source projects I have created and contributed to here. 
 
 I have presented at meetups for Node, Ruby, Go, Erlang and general engineering groups. 
 
