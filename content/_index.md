@@ -18,6 +18,6 @@ I have presented at meetups for Node, Ruby, Go, Erlang and general engineering g
 
 I maintain [Faizn Software Pty Ltd](https://abr.business.gov.au/ABN/View?abn=48693296472) for consulting and contracting with clients. 
 
- I've been building [a series of skills](https://nicholasf.dev/blog/i-dont-even-have-any-good-skills/) around agentic coding to create a full product of my own, in the roleplaying (as in D&D) space. This has mostly been to produce a product I would enjoy using - disengaging from rushing something - and to see how much leverage I can get from delegating work to agents. It's also been to understand the evolving role of programmer by coordinating agents to build an entire product singlehandedly. I imagine I'll be blogging about this at some stage in the near future when an MVP arrives. 
+ I've been building [a series of skills](https://nicholasf.dev/blog/i-dont-even-have-any-good-skills/) around agentic coding to create a full product of my own, in the roleplaying (as in D&D) space. This has mostly been to produce something I would enjoy using - disengaging from rushing something - but has also been to understand the evolving role of the programmer coordinating agents to build an entire product singlehandedly. I imagine I'll be blogging about this at some stage in the near future when an MVP arrives. 
 
 I'm settled in Melbourne CBD, though I occasionally work in Sydney. I have had some brief working stints in the USA.
