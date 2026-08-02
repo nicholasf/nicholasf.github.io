@@ -1,0 +1,144 @@
+/* Experiment: typography-led minimal
+   Single column, printed-essay feel. Monospace throughout for a
+   quiet, considered voice instead of the default UI sans-serif.
+   Delete this file to drop the experiment; custom.css is untouched. */
+
+:root {
+    --mono: "iA Writer Mono V", "Input Mono", ui-monospace, "SF Mono", "Cascadia Mono",
+        "JetBrains Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    --main-width: 1080px;
+    --nav-width: 1080px;
+    --content-gap: 32px;
+}
+
+html,
+body,
+input,
+textarea {
+    font-family: var(--mono);
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ---- header: text, not a nav bar ---- */
+
+.header-nav {
+    padding: var(--gap) var(--gap) calc(var(--gap) * 0.75) var(--gap);
+    border-bottom: 1px solid var(--border);
+    line-height: normal;
+}
+
+.logo a {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.menu {
+    column-gap: 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+}
+
+.menu li:not(:last-child)::after {
+    content: "/";
+    margin: 0 0.9rem;
+    color: var(--tertiary);
+}
+
+.menu a {
+    font-size: 15px;
+}
+
+.menu .active {
+    text-decoration-thickness: 1px;
+}
+
+.header-social-icons svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ---- headings: understated, not poster-sized ---- */
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+}
+
+.post-title {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.entry-header h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.post-meta,
+.entry-footer,
+.breadcrumbs {
+    font-size: 13px;
+    letter-spacing: 0.01em;
+}
+
+/* ---- entries: a list of lines, not a stack of cards ---- */
+
+.post-entry {
+    padding: calc(var(--gap) * 0.75) 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+}
+
+.post-entry:hover,
+.post-entry:focus-within {
+    border-color: var(--border);
+}
+
+.entry-content {
+    font-size: 14px;
+    -webkit-line-clamp: 2;
+}
+
+/* ---- tags & pagination: text, not pills/boxes ---- */
+
+.post-tags a {
+    background: transparent;
+    border: none;
+    padding: 0;
+    line-height: 1.4;
+}
+
+.post-tags a::before {
+    content: "#";
+}
+
+.post-tags {
+    gap: 14px;
+}
+
+.paginav {
+    border: none;
+    background: transparent;
+    border-top: 1px solid var(--border);
+    padding-top: var(--gap);
+}
+
+.paginav a {
+    padding: 0;
+}
+</content>
