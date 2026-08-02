@@ -2,9 +2,13 @@
 title = "nicholasf"
 +++
 
-Hi, I'm Nicholas Faiz. I've been programming commercially since 2000. 
+Hi, I'm Nicholas Faiz. {{< social-icons >}}
 
-I very much enjoy coding and have remained hands on, though I do take on architecture and leadership roles.
+I occasionally blog at [Quizzical](/blog/).
+
+I've been programming commercially since 2000. 
+
+I very much enjoy coding and have remained hands on. I generally combine architecture and leadership roles with coding.
 
 I've worked in fintech (LeavePlus, EightCap, ANZ), government (Department of Agriculture), media (Newscorp), gambling (Betfair, Tabcorp), the Australian research sector (Australia Data Archives, Aboriginal & Torres Strait Islander Data Archive) and other sectors. Earlier roles saw me at Johnson & Johnson Medical, Corporate Express (renamed Staples, later acquired by Winq) and Atlassian. I have worked in startups in Australia and the USA. 
 
