@@ -16,7 +16,7 @@ Developing my own working model has coincided with the larger machinery of AI ne
 
 I think the economics and sides being formed in the industry racing toward IPOs and winning an AGI race are particularly distortive on how to use the technology properly. It's clear that the weekly news cycles about Anthropic, OpenAI and rich men sending things into space are affecting financial markets and workplaces alike.  
 
-I'm a fan of [Ed Zitron's reporting](https://www.wheresyoured.at/) lately. If that helps position my thinking on the AI hype. I am also a fan of Yuval Harari and I find his thoughts about [language being a system that could produce both human and other forms of intelligence](https://www.youtube.com/watch?v=_V_ed5fuexA) to be better articulations of the vague ideas I've had regarding the connections between language and consciousness and what comes first.
+I'm a fan of [Ed Zitron's reporting](https://www.wheresyoured.at/) lately. If that helps position my thinking on the AI hype. I am also a fan of Yuval Harari and I find his thoughts about [language being a system that could produce both human and other forms of intelligence](https://www.youtube.com/watch?v=_V_ed5fuexA&t=235) to be better articulations of the vague ideas I've had regarding the connections between language and consciousness and what comes first.
 
 Anyway, to the point of this post, my simplified model of using agents has worked well enough (not perfectly). I can build a series of specifications, break them into smaller pieces called tasks, calculate their complexity sizes and have an LLM perform the work for me. 
 
