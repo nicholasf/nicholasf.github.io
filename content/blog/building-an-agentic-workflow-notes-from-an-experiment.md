@@ -10,7 +10,7 @@ TL/DR - my current agentic programming model is to use Claude Code with another 
 
 I'm writing this with a slight cold and a touch of fatigue, so if that comes through, excuse it.
 
-A few months ago I blogged about [a set of skills](https://nicholasf.dev/blog/i-dont-even-have-any-good-skills/) I'd developed which allow me to hand off work to Claude Code and some open models running on another machine in my home lab (here "home lab" means gaming machine in the next room). I've developed a reasonable way of planning work in the form of tasks, then handing them off to either Claude Code running remotely or qwen3-coder-30b running. This blog post is about that.
+A few months ago I blogged about [a set of skills](https://nicholasf.dev/blog/i-dont-even-have-any-good-skills/) I'd developed which allow me to hand off work to Claude Code and some open models running on another machine in my home lab (here "home lab" means gaming machine in the next room). I've developed a reasonable way of planning work in the form of tasks, then handing them off to either Claude Code (mostly running Sonnet) or qwen3-coder-30b running in the next room. This blog post is about that.
 
 Developing my own working model has coincided with the larger machinery of AI in the wider industry and my own thoughts around them. I think LLMs are a tremendous technology which a software engineer needs to adopt. To my mind, they are something like hallucinating encyclopedias that can help you form input parameters to other programs, which they may or may not be involved in writing. They are fun, incredibly informative, in need of truth checking and, if approached correctly, useful.
 
