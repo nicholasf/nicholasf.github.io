@@ -8,7 +8,7 @@ TL/DR - my current agentic programming model is to use Claude Code with another 
 
 ![Agentic communication](/images/Fig_7_Le_Telephone_by_T_du_Moncel_Paris_1880_(Large).jpg)
 
-I'm writing this with a slight cold and a touch of fatigue, so if that comes through, excuse it.
+I'm writing this with a slight cold and a touch of fatigue, so if that comes through, please excuse it.
 
 A few months ago I blogged about [a set of skills](https://nicholasf.dev/blog/i-dont-even-have-any-good-skills/) I'd developed which allow me to hand off work to Claude Code and some open models running on another machine in my home lab (here "home lab" means gaming machine in the next room). I've developed a reasonable way of planning work in the form of tasks, then handing them off to either Claude Code (mostly running Sonnet) or qwen3-coder-30b running in the next room. This blog post is about that.
 
