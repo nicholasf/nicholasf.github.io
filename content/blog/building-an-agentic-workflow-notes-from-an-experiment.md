@@ -1,6 +1,6 @@
 +++
 date = '2026-08-08T12:10:17+10:00'
-draft = true
+draft = false
 title = 'Building an Agentic Workflow: Notes from an Experiment'
 +++
 
