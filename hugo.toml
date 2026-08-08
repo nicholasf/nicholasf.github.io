@@ -13,7 +13,6 @@ theme = 'PaperMod'
   ShowBreadCrumbs = false
   ShowCodeCopyButtons = true
   ShowShareButtons = false
-  images = ["/images/street_food.png"]
   mainSections = ["blog"]
 
 [[params.socialIcons]]
