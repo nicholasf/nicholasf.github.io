@@ -1,0 +1,6 @@
+{{- /* The first image on a page is typically the LCP element, so fetch it eagerly at high priority; lazy-load the rest. */ -}}
+{{- if eq .Ordinal 0 -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="eager" fetchpriority="high">
+{{- else -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">
+{{- end -}}
