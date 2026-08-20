@@ -20,6 +20,10 @@ theme = 'PaperMod'
   url = "https://github.com/nicholasf"
 
 [[params.socialIcons]]
+  name = "hackyderm"
+  url = "https://hachyderm.io/@nicholasf"
+
+[[params.socialIcons]]
   name = "bluesky"
   url = "https://bsky.app/profile/nicholasf.dev"
 
