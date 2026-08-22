@@ -33,9 +33,9 @@ It takes a SKILLS_HOME env var, which is a location where all skills are kept gl
 |------|-----|-----------------|
 | manage-skills-skill | git@github.com:nicholasf/manage-skills-skill.git | true |
 | track-tasks-skill | git@github.com:nicholasf/track-tasks-skill.git | true |
-| load-topology-skill | git@github.com:nicholasf/load-topology-skill.git | true |
-| ask-remote-agent-skill | git@github.com:nicholasf/ask-remote-agent-skill.git | false |
-| ask-remote-llm-skill | git@github.com:nicholasf/ask-remote-llm-skill.git | false |
+| topology-skill | git@github.com:nicholasf/topology-skill.git | true |
+| ask-agent-skill | git@github.com:nicholasf/ask-agent-skill.git | false |
+| ask-llm-skill | git@github.com:nicholasf/ask-llm-skill.git | false |
 
 _Table trimmed for readability — local paths and pinned versions omitted._
 
@@ -63,31 +63,31 @@ You can, however, use it in individual project with a `skills.md` file, that wil
 
 Lastly, it has a simple integration with `.env` files. I found that my skills began needing environment variables for API access, etc., and it was cleaner to let the management solution define a central ability for reuse.
 
-## 2. Load Topology
+## 2. Topology
 
-[load-topology-skill](https://github.com/nicholasf/load-topology-skill).
+[topology-skill](https://github.com/nicholasf/topology-skill).
 
-This is probably the most interesting skill. It lets you build a map of machines on your network that you can then refer to to do other things. At the start of each of my coding sessions I now run `/load-topology`.
+This is probably the most interesting skill. It lets you build a map of machines on your network that you can then refer to to do other things. At the start of each of my coding sessions I now run `/topology`.
 
 I use a [tailnet](https://tailscale.com/docs/concepts/tailnet). The skill has a command which wraps a call to [Tailscale's  `status` command](https://tailscale.com/docs/install), which returns a list of all devices registered on the tailnet. Alternatively, I have defined a manual provider, where you can enter in an IP address of a machine by interacting with your agent. 
 
 Via a slash command in the terminal:
 
 ```
-/load-topology init tailscale 
+/topology init tailscale 
 
 # or
 
-/load-topology init manual
+/topology init manual
 ```
 
 Otherwise, via the script:
 ```
 # Tailscale:
-python3 scripts/init.py --provider tailscale
+python3 -m topology.cli init --provider tailscale
 
 # or, manual:
-python3 scripts/init.py --provider manual --machines "pond 192.168.86.118"
+python3 -m topology.cli init --provider manual --machines "pond 192.168.86.118"
 
 ```
 
@@ -95,7 +95,7 @@ So, yes, then you have natural language phrases about asking your primary agent 
 
 **THERE ARE SECURITY RISKS HERE - ENSURE YOU ARE DOING THIS WITHIN YOUR HOME LAB AND THAT YOU UNDERSTAND WHAT YOU ARE DOING AND WHAT THE AGENT CAN DO.**
 
-Running `/load-topology discover` will give you a detailed set of specs about your machines and the LLMs on them. 
+Running `/topology discover` will give you a detailed set of specs about your machines and the LLMs on them. 
 
 Running `benchmark` can help you calculate [tokens per second](https://www.reddit.com/r/LocalLLaMA/comments/162pgx9/what_do_yall_consider_acceptable_tokens_per/) on the various LLMs you might be running. I currently get around 215 tks with qwen on my RTX 4090.
 
@@ -116,9 +116,9 @@ _Table trimmed for readability — IPs, agent config, and other implementation c
 The topology file has a convention that other skills can append data to it, as needed, in separate tables in the same file. This becomes necessary for other skills which leverage the topology for agent specific tasks. 
 
 
-## 3. Ask Remote Agent (depends on load-topology-skill)
+## 3. Ask Agent (depends on topology-skill)
 
-[ask-remote-agent-skill](https://github.com/nicholasf/ask-remote-agent-skill).
+[ask-agent-skill](https://github.com/nicholasf/ask-agent-skill).
 
 This skill allows one agent, Claude Pro, to communicate with another agent on another machine for any need, but for me it's typically coding.
 
@@ -142,17 +142,17 @@ local-claude-agent
   [pond-qwen-hermes] response ◄─────────┘
 ```
 
-Importantly, ask-remote-agent introduces the notion of `agent handles`. You can see one used above - "pond-qwen-hermes" means the machine called pond, using qwen, running the hermes agent.
+Importantly, ask-agent introduces the notion of `agent handles`. You can see one used above - "pond-qwen-hermes" means the machine called pond, using qwen, running the hermes agent.
 
-## 4. Ask Remote LLM  (depends on load-topology-skill)
+## 4. Ask LLM  (depends on topology-skill)
 
-[ask-remote-llm-skill](https://github.com/nicholasf/ask-remote-llm-skill) is a precursor to ask-remote-agent.
+[ask-llm-skill](https://github.com/nicholasf/ask-llm-skill) is a precursor to ask-agent.
 
 It lets your primary agent (for me that's Claude Code) ask another LLM to do something without leveraging an agent. In this case, the remote LLM doesn't need to have the source code or even the language installed. It will just use its model to produce results.
 
 The skill itself contains a list of tools that the primary agent can run on behalf of the remote LLM. So, for example, the remote LLM could ask the primary agent to read a particular file on its file system and send back the response. 
 
-## 5. Track Tasks (depends on load-topology-skill, ask-remote-agent-skill, ask-remote-llm-skill)
+## 5. Track Tasks (depends on topology-skill, ask-agent-skill, ask-llm-skill)
 
 [This](https://github.com/nicholasf/track-tasks-skill) is a classic task tracking ability which uses the file system to plan tasks and execute them in `pending`, `completed` or `deprecated` states.
 
@@ -162,7 +162,7 @@ In a sense, it's very boring. In another, this is where a lot of the agentic log
 
 A [programme task](https://github.com/nicholasf/track-tasks-skill#programme-tasks) will let you create a parent task that organises many tasks under one umbrella.
 
-Interestingly, I have been able to generate an estimated processing time for [the duration a remote agent might take](https://github.com/nicholasf/track-tasks-skill#estimate-time) to complete a task. This is done by taking the `context-window` size of an LLM calculated by running `/load-topology benchmark`, then calling a `tokenize` function on the target agent with the task itself, understanding how many files need to be parsed by the remote agent, and then understanding how much of the context window is being consumed by the task. That lets the primary agent put a level of difficulty on the task itself - L1, L2 or L3 - that can be correlated to how many tokens can be processed in how many seconds. 
+Interestingly, I have been able to generate an estimated processing time for [the duration a remote agent might take](https://github.com/nicholasf/track-tasks-skill#estimate-time) to complete a task. This is done by taking the `context-window` size of an LLM calculated by running `/topology benchmark`, then calling a `tokenize` function on the target agent with the task itself, understanding how many files need to be parsed by the remote agent, and then understanding how much of the context window is being consumed by the task. That lets the primary agent put a level of difficulty on the task itself - L1, L2 or L3 - that can be correlated to how many tokens can be processed in how many seconds. 
 
 The gap here is the computation time of the LLM itself, I suppose, in how long it takes to process certain token scenarios but, remember, these machines aren't taking time to think. They are just processing tokens along decision trees, etc. So far it seems reasonable to assume it's a matter of understanding token processing size constraints and throughput. This feature needs more testing but has been fun.
 
